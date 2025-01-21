@@ -2,25 +2,25 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { TwitterCard } from './TwitterCard';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <article>
-        <header>
-              <img src="https://unavatar.io/github/mdo" alt="Avatar of Mark Otto"/>
-              <strong>Mark Otto</strong>
-              <span>@Markotto23</span>
+    <div className='App'>
+    <TwitterCard
+      avatar="https://unavatar.io/github/mdo"
+      name="Mark Otto"
+      username="Markotto23"
+    />
+    <TwitterCard
+      avatar="https://unavatar.io/github/johndoe"
+      name="John Doe"
+      username="johndoe"
+    />
+  </div>
+);
 
-              <aside>
-                <button>Seguir</button>
-              </aside>
-
-        </header>
-    </article>
-      
-  )
 }
 
 export default App
